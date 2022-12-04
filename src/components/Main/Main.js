@@ -15,6 +15,8 @@ function Main() {
         { question: "Usamos props para __", answer: "Passar diferentes informações para componentes", finalizado: 0 },
         { question: "Usamos estado (state) para __", answer: "Dizer para o React quais informações quando atualizadas devem renderizar a tela novamente", finalizado: 0 }
       ])
+    const [answers, setAnswers] = useState({respostas: []})
+    
     
 
     return (
@@ -22,10 +24,10 @@ function Main() {
             <Header />
             {cards.map((card, index) => {
                 return(
-                    <FlashCard key={index} indice={index + 1} card={card} />
+                    <FlashCard key={index} indice={index + 1} card={card} answers={answers} setAnswers={setAnswers} />
                 )
             })}
-            <Footer cards={cards} />
+            <Footer cards={cards} answers={answers}/>
         </ContainerPrincipal>
     )
 }

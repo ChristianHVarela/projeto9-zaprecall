@@ -13,12 +13,13 @@ export const PerguntaFechada = styled.div`
     align-items: center;
     justify-content: space-between;
     p {
+        text-decoration: ${props => props.stage ? "line-through" : "none"};
         font-family: 'Recursive';
         font-style: normal;
         font-weight: 700;
         font-size: 16px;
         line-height: 19px;
-        color: #333333;
+        color: ${props => props.color};
     }
 `
 

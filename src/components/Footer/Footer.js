@@ -1,11 +1,16 @@
 import { ContentFooter, FooterConcluidos } from "./style";
 
 function Footer(props){
-    const {cards} = props
+    const {cards, answers} = props
+
+    function quantiaRespostas(){
+        console.log(answers);
+        return answers.respostas.length
+    }
 
     return (
         <FooterConcluidos>
-            <ContentFooter>{`0/${cards.length} CONCLUÍDOS`}</ContentFooter>
+            <ContentFooter>{`${quantiaRespostas()}/${cards.length} CONCLUÍDOS`}</ContentFooter>
         </FooterConcluidos>
     )
 }
