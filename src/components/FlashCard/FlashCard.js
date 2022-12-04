@@ -72,9 +72,9 @@ function FlashCard(props){
             <PerguntaAbertaEstagioDois data-test="flashcard" estagiodois={estagiodois}>
                 <p data-test="flashcard-text">{card.answer}</p>
                 <footer>
-                    <ButtonPergunta data-test="no-icon" onClick={() => escolherCard(1)} color={"#FF3030"}>Não lembrei</ButtonPergunta>
-                    <ButtonPergunta data-test="zap-icon" onClick={() => escolherCard(2)} color={"#FF922E"}>Quase não lembrei</ButtonPergunta>
-                    <ButtonPergunta data-test="partial-icon" onClick={() => escolherCard(3)} color={"#2FBE34"}>Zap!</ButtonPergunta>
+                    <ButtonPergunta data-test="no-btn" onClick={() => escolherCard(1)} color={"#FF3030"}>Não lembrei</ButtonPergunta>
+                    <ButtonPergunta data-test="zap-btn" onClick={() => escolherCard(2)} color={"#FF922E"}>Quase não lembrei</ButtonPergunta>
+                    <ButtonPergunta data-test="partial-btn" onClick={() => escolherCard(3)} color={"#2FBE34"}>Zap!</ButtonPergunta>
                 </footer>
             </PerguntaAbertaEstagioDois>
         </>

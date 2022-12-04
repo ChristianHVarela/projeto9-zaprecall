@@ -4,7 +4,8 @@ import Footer from "../Footer/Footer";
 import { ContainerPrincipal } from "./style";
 import FlashCard from "../FlashCard/FlashCard";
 
-function Main() {
+function Main(props) {
+    const {startGame} = props
     const [cards, setCards] = useState([
         { question: "O que é JSX?", answer: "Uma extensão da linguagem JavaScript", finalizado: 0},
         { question: "O React é __", answer: "Uma biblioteca JavaScript para construção de interfaces", finalizado: 0 },
@@ -20,7 +21,7 @@ function Main() {
     
 
     return (
-        <ContainerPrincipal>
+        <ContainerPrincipal startGame={startGame}>
             <Header />
             {cards.map((card, index) => {
                 return(

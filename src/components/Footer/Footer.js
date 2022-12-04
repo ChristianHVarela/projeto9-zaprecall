@@ -9,7 +9,7 @@ function Footer(props){
     }
 
     return (
-        <FooterConcluidos>
+        <FooterConcluidos data-test="footer">
             <ContentFooter>{`${quantiaRespostas()}/${cards.length} CONCLUÍDOS`}</ContentFooter>
         </FooterConcluidos>
     )
