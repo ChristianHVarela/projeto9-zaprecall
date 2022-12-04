@@ -60,6 +60,12 @@ export const ButtonPergunta = styled.button`
     font-size: 12px;
     line-height: 14px;
     color: #FFFFFF;
+    &:hover {
+        filter: brightness(0.8);
+    }
+    &:active {
+        filter: brightness(1.2);
+    }
 `
 
 export const PerguntaAbertaEstagioDois = styled.div`

@@ -8,7 +8,7 @@ import Quase from "../../assets/icone_quase.png"
 
 
 function FlashCard(props){
-    const {card, indice, answers, setAnswers} = props
+    const {card, indice, answers, setAnswers, setMiss, setHit, cards} = props
     const [estagioum, setEstagioum] = useState(false)
     const [estagiodois, setEstagiodois] = useState(false)
     const [imageInitial, setImageInitial] = useState(SetaPlay)
@@ -55,6 +55,13 @@ function FlashCard(props){
                 break;
         }
         setAnswers({respostas})
+        if (respostas.length === cards.length){
+            if (respostas.includes("#FF3030") || respostas.includes("#333333")){
+                setMiss(true)
+            } else {
+                setHit(true)
+            }
+        }
     }
 
     return (

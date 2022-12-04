@@ -17,18 +17,19 @@ function Main(props) {
         { question: "Usamos estado (state) para __", answer: "Dizer para o React quais informações quando atualizadas devem renderizar a tela novamente", finalizado: 0 }
       ])
     const [answers, setAnswers] = useState({respostas: []})
+    const [hit, setHit] = useState(false)
+    const [miss, setMiss] = useState(false)
     
-    
-
     return (
         <ContainerPrincipal startGame={startGame}>
             <Header />
             {cards.map((card, index) => {
                 return(
-                    <FlashCard key={index} indice={index + 1} card={card} answers={answers} setAnswers={setAnswers} />
+                    <FlashCard key={index} indice={index + 1} card={card} answers={answers} 
+                    setAnswers={setAnswers} setHit={setHit} setMiss={setMiss} cards={cards}/>
                 )
             })}
-            <Footer cards={cards} answers={answers}/>
+            <Footer cards={cards} answers={answers} hit={hit} miss={miss} />
         </ContainerPrincipal>
     )
 }
